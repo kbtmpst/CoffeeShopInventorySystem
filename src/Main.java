@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Inventory inventory = new Inventory(50); 
+        Inventory inventory = new Inventory(50);
         InventoryReceipt receipt = new InventoryReceipt();
         java.util.Scanner sc = new java.util.Scanner(System.in);
 
@@ -20,12 +20,14 @@ public class Main {
                 choice = Integer.parseInt(sc.nextLine());
 
                 switch (choice) {
+
                     case 1: // ADD
                         System.out.print("Enter coffee name: ");
                         String name = sc.nextLine().trim();
 
-                        if (name.isEmpty()) {
-                            throw new InvalidValueException("Coffee name cannot be empty!");
+                        // FIX: Reject numbers or invalid characters
+                        if (name.isEmpty() || !name.matches(".*[a-zA-Z].*")) {
+                            throw new InvalidValueException("Coffee name must contain letters and cannot be blank!");
                         }
 
                         System.out.print("Enter price: ");
@@ -39,7 +41,7 @@ public class Main {
                         if (qty < 0) {
                             throw new InvalidValueException("Quantity cannot be negative!");
                         }
-                        if (qty > 9999) { // Max quantity limit
+                        if (qty > 9999) {
                             throw new InvalidValueException("Quantity cannot exceed 9999!");
                         }
 
@@ -76,7 +78,7 @@ public class Main {
                         if (newQty < 0) {
                             throw new InvalidValueException("Quantity cannot be negative!");
                         }
-                        if (newQty > 9999) { // Max quantity limit
+                        if (newQty > 9999) {
                             throw new InvalidValueException("Quantity cannot exceed 9999!");
                         }
 
@@ -84,15 +86,15 @@ public class Main {
                         System.out.println("✔ Stock updated!");
                         break;
 
-                    case 3: // VIEW ONLY
+                    case 3:
                         inventory.displayProducts();
                         break;
 
-                    case 4: // GENERATE RECEIPT ONLY
+                    case 4:
                         receipt.generateReceipt(inventory.getProducts(), inventory.getCount());
                         break;
 
-                    case 5: // DELETE ITEM
+                    case 5: // DELETE
                         if (inventory.getCount() == 0) {
                             System.out.println("❌ Inventory is empty. Nothing to delete.");
                             break;
@@ -115,7 +117,7 @@ public class Main {
                 }
 
             } catch (NumberFormatException nfe) {
-                System.out.println("❌ Invalid number input. Please try again.");
+                System.out.println("❌ Invalid number input. Please enter valid numeric values!");
             } catch (InvalidValueException ive) {
                 System.out.println("❌ ERROR: " + ive.getMessage());
             } catch (IndexOutOfBoundsException iobe) {
