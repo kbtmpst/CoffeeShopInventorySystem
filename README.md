@@ -9,15 +9,7 @@ A simple Java console application designed to manage coffee shop inventory while
 
 ## 📌 Project Overview
 
-This program allows users to:
-
-* Add coffee items
-* Update stock
-* View inventory
-* Delete items
-* Generate an inventory receipt
-
-It showcases essential OOP principles through a practical and easy-to-use inventory management system.
+This Coffee Shop Inventory Management System is a Java-based console application designed to help users efficiently manage product stocks within a coffee shop environment. It allows users to add new coffee items, update existing quantities, remove products, and view a detailed list of all items currently in inventory. The system also includes the ability to generate formatted inventory receipts, providing a clear summary of product details and total inventory value. Built with core Object-Oriented Programming principles such as inheritance, abstraction, encapsulation, and polymorphism, the project serves both as a functional tool and an educational demonstration of well-structured OOP design.
 
 ---
 
@@ -104,16 +96,19 @@ We would like to express our gratitude to the following:
 * Our Instructor for continuous guidance throughout the project
 * Java Documentation and Tutorials for providing essential references
 * Online Programming Communities for helping solve coding challenges
-* Team Members for collaboration, ideas, and contributions:
+* Our friends and peers for their support, shared ideas, and encouragement throughout the development of this project
 
-  * Bongolto, Delmar
-  * Cipres, Justine Harvey C.
-  * Papong, Jan Lui L.
-  * Ramos, Jhun Carlo B.
-
-This project is the result of collective effort, learning, and teamwork.
+This project is the result of collaborative learning and consistent effort.
 
 ---
+
+## 🔮 Future Enhancements
+
+Here are potential improvements that can be added in the future:
+
+* Add a graphical user interface (GUI) for improved user experience
+* Implement file storage or database integration for saving inventory data
+* Add search and filter options for easier product lookup
 
 ## ⚠️ Disclaimer
 
