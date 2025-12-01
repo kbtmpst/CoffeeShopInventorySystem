@@ -1,14 +1,14 @@
-☕ Coffee Shop Inventory Management System
+# ☕ Coffee Shop Inventory Management System
 
-IT-2108
-Bongolto, Delmar
-Cipres, Justine Harvey C.
-Papong, Jan Lui L.
-Ramos, Jhun Carlo B.
+**IT-2108 — Final Project**
+**Members:** Bongolto, Delmar · Cipres, Justine Harvey C. · Papong, Jan Lui L. · Ramos, Jhun Carlo B.
 
-A simple Java console application that helps manage coffee shop inventory using Object-Oriented Programming (OOP) concepts.
+A simple Java console application designed to manage coffee shop inventory while demonstrating key Object-Oriented Programming (OOP) concepts.
 
-📌 Project Overview
+---
+
+## 📌 Project Overview
+
 This program allows users to:
 
 - Add coffee items
@@ -16,58 +16,70 @@ This program allows users to:
 - View inventory
 - Delete items
 - Generate an inventory receipt
-  It demonstrates key OOP principles while providing a practical inventory system.
 
-🧠 OOP Concepts Used
-Abstraction – CoffeeProduct is an abstract class.
-Inheritance – HotCoffee, IcedCoffee, and CoffeeBeans extend CoffeeProduct.
-Polymorphism – Each subclass overrides getCategory().
-Encapsulation – Private fields with getters/setters and validation.
-Exception Handling – Custom InvalidValueException for invalid input.
+It showcases essential OOP principles through a practical and easy-to-use inventory management system.
 
-🏗 Program Structure
+---
 
-- Main – menu and program flow
-- CoffeeProduct – abstract base class
-- HotCoffee / IcedCoffee / CoffeeBeans – product types
-- Inventory – stores, updates, deletes, displays products
-- InventoryReceipt – prints formatted receipt
-- InvalidValueException – custom error handling
+## 🧠 OOP Concepts Applied
 
-📁 Project Structure
+- **Abstraction** – `CoffeeProduct` serves as an abstract base class.
+- **Inheritance** – `HotCoffee`, `IcedCoffee`, and `CoffeeBeans` extend `CoffeeProduct`.
+- **Polymorphism** – Each subclass overrides `getCategory()`.
+- **Encapsulation** – Private fields managed via getters, setters, and validation.
+- **Exception Handling** – Custom `InvalidValueException` for handling invalid input.
 
+---
+
+## 🏗 Program Structure
+
+- **Main** – Program flow and menu system
+- **CoffeeProduct** – Abstract base class for all coffee products
+- **HotCoffee / IcedCoffee / CoffeeBeans** – Subclasses representing product types
+- **Inventory** – Stores, updates, deletes, and displays product data
+- **InventoryReceipt** – Creates and prints formatted receipts
+- **InvalidValueException** – Handles invalid values safely
+
+---
+
+## 📁 Project Directory Structure
+
+```
 CoffeeShopInventorySystem/
-
 ├── .vscode/
-
 ├── src/
-│ ├── CoffeeBeans.java
-
-│ ├── CoffeeProduct.java
-
-│ ├── HotCoffee.java
-
-│ ├── IcedCoffee.java
-
-│ ├── InvalidValueException.java
-
-│ ├── Inventory.java
-
-│ ├── InventoryReceipt.java
-
-│ └── Main.java
-
+│   ├── CoffeeBeans.java
+│   ├── CoffeeProduct.java
+│   ├── HotCoffee.java
+│   ├── IcedCoffee.java
+│   ├── InvalidValueException.java
+│   ├── Inventory.java
+│   ├── InventoryReceipt.java
+│   └── Main.java
 └── README.md
+```
 
-▶️ How to Run
-Compile all Java files:
-javac \*.java
+---
 
-Run the program:
+## ▶️ How to Run
+
+### **Compile all Java files:**
+
+```
+javac *.java
+```
+
+### **Run the program:**
+
+```
 java Main
+```
 
-🖥 Sample Output
+---
 
+## 🖥 Sample Output
+
+```
 === CURRENT INVENTORY ===
 
 1. Latte (Hot Coffee)
@@ -81,17 +93,36 @@ Category: Hot Coffee
 Quantity: 5
 Subtotal: ₱600.00
 TOTAL INVENTORY VALUE: ₱600.00
+```
 
-🙏 Acknowledgements
+---
+
+## 🙏 Acknowledgements
+
 We would like to express our gratitude to the following:
 
-- Our Instructor for the guidance and support throughout the project.
-- Java Documentation and Tutorials for providing valuable references on Object-Oriented Programming concepts.
-- Online Programming Communities for insights and solutions that helped us overcome coding challenges.
-- Team Members (Bongolto, Delmar; Cipres, Justine Harvey C.; Papong, Jan Lui L.; Ramos, Jhun Carlo B.) for their collaboration, ideas, and effort in completing this project.
-  This project would not have been possible without the collective learning and support from all these sources.
+- Our Instructor for continuous guidance throughout the project
+- Java Documentation and Tutorials for providing essential references
+- Online Programming Communities for helping solve coding challenges
+- Team Members for collaboration, ideas, and contributions:
 
-⚠️ Disclaimer
-This project was developed solely for educational purposes as part of the IT-2108 course. It is a simple console-based inventory management system and may not be suitable for real-world commercial use. The authors are not responsible for any data loss or misuse if the program is adapted or used in an actual business environment. Users are encouraged to test and modify the code responsibly.
+  - Bongolto, Delmar
+  - Cipres, Justine Harvey C.
+  - Papong, Jan Lui L.
+  - Ramos, Jhun Carlo B.
 
-🌟 Thank You!
+This project is the result of collective effort, learning, and teamwork.
+
+---
+
+## ⚠️ Disclaimer
+
+This system was developed strictly for educational purposes as part of the IT-2108 course. It is a basic console‑based inventory management tool and is **not intended for real-world commercial use**. The authors are not liable for any issues arising from modifying or applying the system in an actual business environment.
+
+Users are encouraged to improve, customize, and test the program responsibly.
+
+---
+
+## 🌟 Thank You!
+
+Thank you for viewing and using our Coffee Shop Inventory Management System. We hope this helps you understand core OOP concepts more clearly!
