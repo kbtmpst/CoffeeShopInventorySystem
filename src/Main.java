@@ -22,13 +22,25 @@ public class Main {
                 switch (choice) {
                     case 1: // ADD
                         System.out.print("Enter coffee name: ");
-                        String name = sc.nextLine();
+                        String name = sc.nextLine().trim(); // remove whitespace
+
+                        if (name.isEmpty()) {
+                            throw new InvalidValueException("Coffee name cannot be empty!");
+                        }
 
                         System.out.print("Enter price: ");
                         double price = Double.parseDouble(sc.nextLine());
 
+                        if (price <= 0) {
+                            throw new InvalidValueException("Price must be greater than 0!");
+                        }
+
                         System.out.print("Enter quantity: ");
                         int qty = Integer.parseInt(sc.nextLine());
+
+                        if (qty < 0) {
+                            throw new InvalidValueException("Quantity cannot be negative!");
+                        }
 
                         CoffeeProduct product;
 
@@ -41,7 +53,8 @@ public class Main {
 
                         if (type == 1) product = new HotCoffee(name, price, qty);
                         else if (type == 2) product = new IcedCoffee(name, price, qty);
-                        else product = new CoffeeBeans(name, price, qty);
+                        else if (type == 3) product = new CoffeeBeans(name, price, qty);
+                        else throw new InvalidValueException("Invalid coffee type!");
 
                         inventory.addProduct(product);
                         System.out.println("✔ Coffee item added!");
@@ -53,6 +66,10 @@ public class Main {
 
                         System.out.print("Enter new quantity: ");
                         int newQty = Integer.parseInt(sc.nextLine());
+
+                        if (newQty < 0) {
+                            throw new InvalidValueException("Quantity cannot be negative!");
+                        }
 
                         inventory.updateProductQty(index, newQty);
                         System.out.println("✔ Stock updated!");
