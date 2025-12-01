@@ -36,26 +36,17 @@ Exception Handling – Custom InvalidValueException for invalid input.
 
 📁 Project Structure
 
-CoffeeShopInventorySystem/
-
-├── .vscode/
-
-├── src/
-│ ├── CoffeeBeans.java
-
-│ ├── CoffeeProduct.java
-
-│ ├── HotCoffee.java
-
-│ ├── IcedCoffee.java
-
-│ ├── InvalidValueException.java
-
-│ ├── Inventory.java
-
-│ ├── InventoryReceipt.java
-
-│ └── Main.java
+CoffeeShopInventorySystem/ 
+├── .vscode/ 
+├── src/ 
+│ ├── CoffeeBeans.java 
+│ ├── CoffeeProduct.java 
+│ ├── HotCoffee.java 
+│ ├── IcedCoffee.java 
+│ ├── InvalidValueException.java 
+│ ├── Inventory.java 
+│ ├── InventoryReceipt.java  
+│ └── Main.java   
 
 └── README.md
 
@@ -70,17 +61,17 @@ java Main
 
 === CURRENT INVENTORY ===
 
-1. Latte (Hot Coffee)
-   Price: ₱120.00
-   Qty: 5
-   Total: ₱600.00
+1. Latte (Hot Coffee) 
+   Price: ₱120.00 
+   Qty: 5 
+   Total: ₱600.00 
 
-==== INVENTORY RECEIPT ====
-Item: Latte
-Category: Hot Coffee
-Quantity: 5
-Subtotal: ₱600.00
-TOTAL INVENTORY VALUE: ₱600.00
+==== INVENTORY RECEIPT ==== 
+Item: Latte 
+Category: Hot Coffee 
+Quantity: 5 
+Subtotal: ₱600.00 
+TOTAL INVENTORY VALUE: ₱600.00 
 
 🙏 Acknowledgements
 We would like to express our gratitude to the following:
@@ -95,3 +86,4 @@ We would like to express our gratitude to the following:
 This project was developed solely for educational purposes as part of the IT-2108 course. It is a simple console-based inventory management system and may not be suitable for real-world commercial use. The authors are not responsible for any data loss or misuse if the program is adapted or used in an actual business environment. Users are encouraged to test and modify the code responsibly.
 
 🌟 Thank You!
+
