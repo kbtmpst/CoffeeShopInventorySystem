@@ -35,6 +35,7 @@ Exception Handling – Custom InvalidValueException for invalid input.
 - InvalidValueException – custom error handling
 
 📁 Project Structure
+
 CoffeeShopInventorySystem/
 ├── .vscode/
 ├── src/
