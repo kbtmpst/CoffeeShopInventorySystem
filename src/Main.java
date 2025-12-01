@@ -62,7 +62,7 @@ public class Main {
 
                     case 2: // UPDATE
                         System.out.print("Enter product index: ");
-                        int index = Integer.parseInt(sc.nextLine());
+                        int index = Integer.parseInt(sc.nextLine())-1;
 
                         System.out.print("Enter new quantity: ");
                         int newQty = Integer.parseInt(sc.nextLine());
@@ -85,7 +85,7 @@ public class Main {
 
                     case 5: // DELETE ITEM
                         System.out.print("Enter product index to delete: ");
-                        int delIdx = Integer.parseInt(sc.nextLine());
+                        int delIdx = Integer.parseInt(sc.nextLine())-1;
 
                         inventory.deleteProduct(delIdx);
                         System.out.println("✔ Item deleted!");
