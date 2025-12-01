@@ -1,11 +1,7 @@
 # ☕ Coffee Shop Inventory Management System
 
 **IT-2108 — Final Project**
-**Members:**
-Bongolto, Delmar
-Cipres, Justine Harvey C.
-Papong, Jan Lui L.
-Ramos, Jhun Carlo B.
+**Members:** Bongolto, Delmar · Cipres, Justine Harvey C. · Papong, Jan Lui L. · Ramos, Jhun Carlo B.
 
 A simple Java console application designed to manage coffee shop inventory while demonstrating key Object-Oriented Programming (OOP) concepts.
 
