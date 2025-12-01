@@ -37,16 +37,26 @@ Exception Handling – Custom InvalidValueException for invalid input.
 📁 Project Structure
 
 CoffeeShopInventorySystem/
+
 ├── .vscode/
+
 ├── src/
 │ ├── CoffeeBeans.java
+
 │ ├── CoffeeProduct.java
+
 │ ├── HotCoffee.java
+
 │ ├── IcedCoffee.java
+
 │ ├── InvalidValueException.java
+
 │ ├── Inventory.java
+
 │ ├── InventoryReceipt.java
+
 │ └── Main.java
+
 └── README.md
 
 ▶️ How to Run
