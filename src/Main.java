@@ -30,16 +30,17 @@ public class Main {
 
                         System.out.print("Enter price: ");
                         double price = Double.parseDouble(sc.nextLine());
-
                         if (price <= 0) {
                             throw new InvalidValueException("Price must be greater than 0!");
                         }
 
                         System.out.print("Enter quantity: ");
                         int qty = Integer.parseInt(sc.nextLine());
-
                         if (qty < 0) {
                             throw new InvalidValueException("Quantity cannot be negative!");
+                        }
+                        if (qty > 9999) { // Max quantity limit
+                            throw new InvalidValueException("Quantity cannot exceed 9999!");
                         }
 
                         CoffeeProduct product;
@@ -72,9 +73,11 @@ public class Main {
 
                         System.out.print("Enter new quantity: ");
                         int newQty = Integer.parseInt(sc.nextLine());
-
                         if (newQty < 0) {
                             throw new InvalidValueException("Quantity cannot be negative!");
+                        }
+                        if (newQty > 9999) { // Max quantity limit
+                            throw new InvalidValueException("Quantity cannot exceed 9999!");
                         }
 
                         inventory.updateProductQty(index, newQty);
