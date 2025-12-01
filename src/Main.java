@@ -22,7 +22,7 @@ public class Main {
                 switch (choice) {
                     case 1: // ADD
                         System.out.print("Enter coffee name: ");
-                        String name = sc.nextLine().trim(); // remove whitespace
+                        String name = sc.nextLine().trim();
 
                         if (name.isEmpty()) {
                             throw new InvalidValueException("Coffee name cannot be empty!");
@@ -61,8 +61,14 @@ public class Main {
                         break;
 
                     case 2: // UPDATE
-                        System.out.print("Enter product number: ");
-                        int index = Integer.parseInt(sc.nextLine())-1;
+                        if (inventory.getCount() == 0) {
+                            System.out.println("❌ Inventory is empty. Nothing to update.");
+                            break;
+                        }
+
+                        inventory.displayProducts();
+                        System.out.print("Enter product number to update: ");
+                        int index = Integer.parseInt(sc.nextLine()) - 1;
 
                         System.out.print("Enter new quantity: ");
                         int newQty = Integer.parseInt(sc.nextLine());
@@ -84,8 +90,14 @@ public class Main {
                         break;
 
                     case 5: // DELETE ITEM
+                        if (inventory.getCount() == 0) {
+                            System.out.println("❌ Inventory is empty. Nothing to delete.");
+                            break;
+                        }
+
+                        inventory.displayProducts();
                         System.out.print("Enter product number to delete: ");
-                        int delIdx = Integer.parseInt(sc.nextLine())-1;
+                        int delIdx = Integer.parseInt(sc.nextLine()) - 1;
 
                         inventory.deleteProduct(delIdx);
                         System.out.println("✔ Item deleted!");
@@ -103,6 +115,8 @@ public class Main {
                 System.out.println("❌ Invalid number input. Please try again.");
             } catch (InvalidValueException ive) {
                 System.out.println("❌ ERROR: " + ive.getMessage());
+            } catch (IndexOutOfBoundsException iobe) {
+                System.out.println("❌ ERROR: Invalid product number!");
             } catch (Exception e) {
                 System.out.println("❌ Something went wrong: " + e.getMessage());
             }
